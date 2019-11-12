@@ -1,0 +1,12 @@
+<div class="container" *ngIf="property">
+
+  <div class="col-sm"><img src="../assests/property-image.png" alt="Smiley face" height="42" width="42"></div>
+
+  <div class="col-sm">
+    <h2>{{property.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{property.id}}</div>
+  </div>
+</div>
+
+<button (click)="goBack()">go back</button>
+

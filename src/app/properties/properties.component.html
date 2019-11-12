@@ -1,0 +1,20 @@
+<h2>My Properties</h2>
+<ul class="properties">
+  <li *ngFor="let property of properties">
+    <div class="row">
+      <!--<div class="col-sm"><img src="../../assets/property-image.png" alt="Smiley face" height="200" width="200"></div>-->
+      <div class="col-sm">
+        <h2>{{property.name}}</h2>
+        <button type="button" class="btn btn-outline-primary" routerLink="/details/{{property.id}}">View Details</button>
+        <button type="button" class="btn btn-outline-primary" routerLink="/edit/{{property.id}}">Edit Details</button>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<div>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="btn btn-primary" routerLink="/add">Add New Property</button>
+
+</div>

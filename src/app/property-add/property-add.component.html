@@ -1,0 +1,8 @@
+<label>
+  Property name:
+  <input #propertyName />
+</label>
+<button class="btn btn-primary" (click)="add(propertyName.value); propertyName.value=''">
+  Add
+</button>
+<button (click)="goBack()">go back</button>

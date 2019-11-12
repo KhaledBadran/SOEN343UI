@@ -1,0 +1,7 @@
+
+
+    .properties li:hover {
+      color: #607D8B;
+      background-color: #DDD;
+      left: .1em;
+    }
