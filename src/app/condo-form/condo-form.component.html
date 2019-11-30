@@ -1,0 +1,224 @@
+<form (ngSubmit)="onSubmit(f)" class="form-horizontal" #f="ngForm">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>Address</legend>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="address">Property Address Number</label>
+      <div class="col-md-4">
+        <input ngModel id="address" name="address" type="text" placeholder="1445" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput">Street</label>
+      <div class="col-md-4">
+        <input ngModel id="textinput" name="textinput" type="text" placeholder=" Boulevard de Maisonneuve O" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="city">City</label>
+      <div class="col-md-4">
+        <input ngModel id="city" name="city" type="text" placeholder="Montreal" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="province">Province</label>
+      <div class="col-md-4">
+        <input ngModel id="province" name="province" type="text" placeholder="QC" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="country">Country</label>
+      <div class="col-md-4">
+        <input ngModel id="country" name="country" type="text" placeholder="Canada" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="postalCode">Postal Code</label>
+      <div class="col-md-2">
+        <input ngModel id="postalCode" name="postalCode" type="text" placeholder="H3G 1M8" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <legend>Condo Details</legend>
+
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="bedrooms">Bedrooms</label>
+      <div class="col-md-2">
+        <input ngModel id="bedrooms" name="bedrooms" type="text" placeholder="3" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="bathrooms">Bathrooms</label>
+      <div class="col-md-2">
+        <input ngModel id="bathrooms" name="bathrooms" type="text" placeholder="2" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="parkingSpaces">Parking Spaces</label>
+      <div class="col-md-2">
+        <input ngModel id="parkingSpaces" name="parkingSpaces" type="text" placeholder="2" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="price">Price</label>
+      <div class="col-md-2">
+        <input ngModel id="price" name="price" type="text" placeholder="235,000" class="form-control input-md">
+
+      </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="gymIncluded">Gym Included</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="gymIncluded-0">
+          <input ngModel type="radio" name="gymIncluded" id="gymIncluded-0" value=true checked="checked">
+          Yes
+        </label>
+        <label class="radio-inline" for="gymIncluded-1">
+          <input ngModel type="radio" name="gymIncluded" id="gymIncluded-1" value=false>
+          No
+        </label>
+      </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="storageIncluded">Storage Included</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="storageIncluded-0">
+          <input ngModel type="radio" name="storageIncluded" id="storageIncluded-0" value=true checked="checked">
+          Yes
+        </label>
+        <label class="radio-inline" for="storageIncluded-1">
+          <input ngModel type="radio" name="storageIncluded" id="storageIncluded-1" value=false>
+          No
+        </label>
+      </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="elevatorIncluded">Elevator Included</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="elevatorIncluded-0">
+          <input ngModel type="radio" name="elevatorIncluded" id="elevatorIncluded-0" value=true checked="checked">
+          Yes
+        </label>
+        <label class="radio-inline" for="elevatorIncluded-1">
+          <input ngModel type="radio" name="elevatorIncluded" id="elevatorIncluded-1" value=false>
+          No
+        </label>
+      </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="outdoorAreasIncluded">Outdoor Areas Included</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="outdoorAreasIncluded-0">
+          <input ngModel type="radio" name="outdoorAreasIncluded" id="outdoorAreasIncluded-0" value=true checked="checked">
+          Yes
+        </label>
+        <label class="radio-inline" for="outdoorAreasIncluded-1">
+          <input ngModel type="radio" name="outdoorAreasIncluded" id="outdoorAreasIncluded-1" value=false>
+          No
+        </label>
+      </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="buildingInsurance">Building Insurance</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="buildingInsurance-0">
+          <input ngModel type="radio" name="buildingInsurance" id="buildingInsurance-0" value=true checked="checked">
+          Yes
+        </label>
+        <label class="radio-inline" for="buildingInsurance-1">
+          <input ngModel type="radio" name="buildingInsurance" id="buildingInsurance-1" value=false>
+          No
+        </label>
+      </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="airConditioning">Air Conditioning</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="airConditioning-0">
+          <input ngModel type="radio" name="airConditioning" id="airConditioning-0" value=true checked="checked">
+          Yes
+        </label>
+        <label class="radio-inline" for="airConditioning-1">
+          <input ngModel type="radio" name="airConditioning" id="airConditioning-1" value=false>
+          No
+        </label>
+      </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="petsAllowed">Pets Allowed</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="petsAllowed-0">
+          <input ngModel type="radio" name="petsAllowed" id="petsAllowed-0" value=true checked="checked">
+          Yes
+        </label>
+        <label class="radio-inline" for="petsAllowed-1">
+          <input ngModel type="radio" name="petsAllowed" id="petsAllowed-1" value=false>
+          No
+        </label>
+      </div>
+    </div>
+
+    <!-- Multiple Radios (inline) -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="conciergeIncluded">Concierge Included</label>
+      <div class="col-md-4">
+        <label class="radio-inline" for="conciergeIncluded-0">
+          <input ngModel type="radio" name="conciergeIncluded" id="conciergeIncluded-0" value=true checked="checked">
+          Yes
+        </label>
+        <label class="radio-inline" for="conciergeIncluded-1">
+          <input ngModel type="radio" name="conciergeIncluded" id="conciergeIncluded-1" value=false>
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

@@ -1,8 +1,39 @@
-<label>
-  Property name:
-  <input #propertyName />
-</label>
-<button class="btn btn-primary" (click)="add(propertyName.value); propertyName.value=''">
-  Add
-</button>
-<button (click)="goBack()">go back</button>
+<form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    Address:
+    <input type="text" formControlName="parkingSpaces">
+  </label>
+
+  <label>
+    bedrooms:
+    <input type="text" formControlName="bedrooms">
+  </label>
+
+  <div formGroupName="address">
+    <h3>Address</h3>
+
+    <label>
+      Street:
+      <input type="text" formControlName="street">
+    </label>
+
+    <label>
+      City:
+      <input type="text" formControlName="city">
+    </label>
+
+    <label>
+      State:
+      <input type="text" formControlName="state">
+    </label>
+
+    <label>
+      Postal Code:
+      <input type="text" formControlName="postalCode">
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+</form>

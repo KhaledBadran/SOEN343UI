@@ -1,0 +1,8 @@
+#RightList {
+  padding-right: 60px;
+}
+
+  #RightList li > a {
+    padding: 1px 12px;
+  }
+

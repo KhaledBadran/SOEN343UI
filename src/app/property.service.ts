@@ -1,5 +1,4 @@
 import { Property } from './Property';
-import { PROPERTIES } from './mock-properties';
 
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
@@ -12,15 +11,16 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class PropertyService {
 
-  private propertiesURL = 'https://5dc86769672b6e001426b576.mockapi.io/api/properties';  // URL to web api
+  private propertiesURL = 'http://localhost:8080/api/v1';  // URL to local api
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   };
 
   constructor(private http: HttpClient) { }
 
   getProperties(): Observable<Property[]> {
-    return this.http.get<Property[]>(this.propertiesURL);
+    const getPropertiesURL = `${this.propertiesURL}/property`;
+    return this.http.get<Property[]>(getPropertiesURL);
   }
 
   getProperty(id: number): Observable<Property> {

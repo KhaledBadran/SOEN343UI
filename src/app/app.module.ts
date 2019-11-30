@@ -12,6 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PropertyEditComponent } from './property-edit/property-edit.component';
 import { PropertyAddComponent } from './property-add/property-add.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ApartmentFormComponent } from './apartment-form/apartment-form.component';
+import { HouseFormComponent } from './house-form/house-form.component';
+import { CondoFormComponent } from './condo-form/condo-form.component';
+import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,18 @@ import { PropertyAddComponent } from './property-add/property-add.component';
     PropertyDetailsComponent,
     NavbarComponent,
     PropertyEditComponent,
-    PropertyAddComponent
-  ],
+    PropertyAddComponent,
+    ApartmentFormComponent,
+    HouseFormComponent,
+    CondoFormComponent,
+    ApartmentDetailsComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
