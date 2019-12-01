@@ -1,28 +1,30 @@
-<h2>My Properties</h2>
+
+<mat-card class="z-depth-2 title" [style.backgroundColor]="'Blue'"><mat-card-title><h2>My Properties</h2></mat-card-title></mat-card>
 <ul class="properties">
   <li *ngFor="let property of properties">
-    <div class="row">
-      <!--<div class="col-sm"><img src="../../assets/property-image.png" alt="Smiley face" height="200" width="200"></div>-->
-      <div class="col-sm">
-        <h6>id {{property.id}}</h6>
-        <h6>Address: {{property.address.address}} {{property.address.street}}, {{property.address.city}},  {{property.address.province}}, {{property.address.postalCode}} </h6>
-        <h6>petsAllowed {{property.petsAllowed}}</h6>
-        <h6>parkingSpaces {{property.parkingSpaces}}</h6>
-        <h6>{{property.bedrooms}} bedrooms  {{property.bathrooms}} bathrooms</h6>
-        <h6>propertyType {{property.propertyType}}</h6>
-        <h6>price {{property.price}}</h6>
+    <mat-card class="z-depth-2">
+    <mat-card-title ><h3>{{property.propertyType}}</h3></mat-card-title>
+    <mat-card-subtitle><Strong>ID:</Strong> {{property.id}}</mat-card-subtitle>
+    <mat-card-content>
+        <h6><Strong>Address:</Strong> {{property.address.address}} {{property.address.street}}, {{property.address.city}},  {{property.address.province}}, {{property.address.postalCode}} </h6>
+        <h6><Strong>petsAllowed:</Strong> {{property.petsAllowed}}</h6>
+        <h6><Strong>parkingSpaces:</Strong> {{property.parkingSpaces}}</h6>
+        <h6><Strong>bedrooms:</Strong>{{property.bedrooms}} <Strong>bathrooms:</Strong>{{property.bathrooms}}</h6>
+        <h6><Strong>price:</Strong> {{property.price}}</h6>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-flat-button type="button" class="btn btn-outline-primary spaceRight" routerLink="/details/{{property.propertyType}}/{{property.id}}">View Details</button>
+        <button type="button" class="btn btn-outline-primary spaceRight" routerLink="/edit/{{property.propertyType}}/{{property.id}}">Edit Details</button>
+    </mat-card-actions>
+    <mat-card-footer></mat-card-footer>
 
-        <button type="button" class="btn btn-outline-primary" routerLink="/details/{{property.propertyType}}/{{property.id}}">View Details</button>
-        <button type="button" class="btn btn-outline-primary" routerLink="/edit/{{property.propertyType}}/{{property.id}}">Edit Details</button>
-        <!--<button type="button" class="btn btn-danger" click="deleteProperty(property)">Delete Property</button>-->
-
-      </div>
-    </div>
+</mat-card>
   </li>
 </ul>
 
+
 <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-primary dropdown-toggle title" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Add Property
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
