@@ -4,7 +4,11 @@
 <div class="list-group spaceTop" *ngIf="condo">
     
     <h2  class="list-group-item list-group-item-action list-group-item-primary"><strong>CONDO ID: </strong>{{condo.id}}</h2>
-    <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Address:</strong> {{condo.property.address.address}} {{condo.property.address.street}}, {{condo.property.address.city}}, {{condo.property.address.country}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-danger"><strong>Price:</strong> {{condo.property.price}}$</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Address:</strong> {{condo.property.address.address}} {{condo.property.address.street}}, {{condo.property.address.city}}, {{condo.property.address.province}}, {{condo.property.address.country}}, {{condo.property.address.postalCode}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Pets Allowed:</strong> {{condo.property.petsAllowed}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Number of Bedrooms:</strong> {{condo.property.bedrooms}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Number of Bathrooms:</strong> {{condo.property.bathrooms}}</p>
     <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Elevator Included:</strong> {{condo.elevatorIncluded}}</p>
     <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Storage Included:</strong> {{condo.storageIncluded}}</p>
     <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Outdoor Areas Included:</strong> {{condo.outdoorAreasIncluded}}</p>
@@ -16,7 +20,7 @@
 
   <div class="spaceTop">
   <button type="button" class="btn btn-lg btn-primary spaceRight" (click)="delete()">Delete Property</button>
-  <button type="button" class="btn btn-secondary btn-lg" (click)="goBack()">go back</button>
+  <button type="button" class="btn btn-secondary btn-lg" (click)="goBack()">Go back</button>
 </div>
 
 
