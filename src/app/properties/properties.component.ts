@@ -24,15 +24,11 @@ export class PropertiesComponent implements OnInit {
       .subscribe(properties => this.properties = properties);
   }
 
+  deleteProperty(property: Property): void {
+    console.log('in delete Property!');
+    this.propertyService.deleteProperty(property).subscribe();
+  }
 
-//  add(name: string): void {
-//    name = name.trim();
-//    if (!name) { return; }
-//    this.propertyService.addProperty({ name } as Property)
-//      .subscribe(property => {
-//        this.properties.push(property);
-//      });
-//  }
 
 
 }

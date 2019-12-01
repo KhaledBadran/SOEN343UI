@@ -1,0 +1,219 @@
+<div class="container" *ngIf="house">
+
+  <div class="col-sm"><img src="../assests/house-image.png" alt="Smiley face" height="42" width="42"></div>
+  <h2>{{house.id}}</h2>
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="address">Property Address Number</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="house.property.address.address" placeholder="+{{house.property.address.address}}" id="address" name="address" type="number" class="form-control input-md">
+
+    </div>
+  </div>
+
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="textinput">Street</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="house.property.address.street" placeholder="{{house.property.address.street}}" id="textinput" name="textinput" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="city">City</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="house.property.address.city" placeholder="{{house.property.address.city}}" id="city" name="city" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="province">Province</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="house.property.address.province" placeholder="{{house.property.address.province}}" id="province" name="province" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="country">Country</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="house.property.address.country" placeholder="{{house.property.address.country}}" id="country" name="country" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="postalCode">Postal Code</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="house.property.address.postalCode" placeholder="{{house.property.address.postalCode}}" id="postalCode" name="postalCode" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+
+  <legend>Apartment Details</legend>
+
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="bedrooms">Bedrooms</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="house.property.bedrooms" placeholder="{{house.property.bedrooms}}" id="bedrooms" name="bedrooms" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="bathrooms">Bathrooms</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="house.property.bathrooms" placeholder="{{house.property.bathrooms}}" id="bathrooms" name="bathrooms" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="parkingSpaces">Parking Spaces</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="house.property.parkingSpaces" placeholder="{{house.property.parkingSpaces}}" id="parkingSpaces" name="parkingSpaces" type="number" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="price">Price</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="house.property.price" placeholder="{{house.property.price}}" id="price" name="price" type="number" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="yearBuilt">Year Built</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="house.yearBuilt" placeholder="{{house.yearBuilt}}" id="yearBuilt" name="yearBuilt" type="number" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="basementIncluded">Basement Included</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="basementIncluded-0">
+        <div *ngIf="house.basementIncluded; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <input [(ngModel)]="house.basementIncluded" type="radio" name="basementIncluded" id="basementIncluded-0" value=true checked="checked">
+        </ng-template>
+        <ng-template #elseBlock>
+          <input [(ngModel)]="house.basementIncluded" type="radio" name="basementIncluded" id="basementIncluded-0" value=true>
+        </ng-template>
+        Yes
+      </label>
+      <label class="radio-inline" for="basementIncluded-1">
+        <div *ngIf="house.basementIncluded; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <input ngModel type="radio" name="basementIncluded" id="basementIncluded-1" value=false>
+        </ng-template>
+        <ng-template #elseBlock>
+          <input ngModel type="radio" name="basementIncluded" id="basementIncluded-1" value=false checked="checked">
+        </ng-template>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="privateBackyardIncluded">Private Backyard Included</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="privateBackyardIncluded-0">
+        <input [(ngModel)]="house.privateBackyardIncluded" type="radio" name="privateBackyardIncluded" id="privateBackyardIncluded-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="privateBackyardIncluded-1">
+        <input [(ngModel)]="house.privateBackyardIncluded" type="radio" name="privateBackyardIncluded" id="privateBackyardIncluded-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="transitFriendly">Transit Friendly</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="transitFriendly-0">
+        <input [(ngModel)]="house.transitFriendly" type="radio" name="transitFriendly" id="transitFriendly-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="transitFriendly-1">
+        <input [(ngModel)]="house.transitFriendly" type="radio" name="transitFriendly" id="transitFriendly-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="poolIncluded">Pool Included</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="poolIncluded-0">
+        <input [(ngModel)]="house.poolIncluded" type="radio" name="poolIncluded" id="poolIncluded-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="poolIncluded-1">
+        <input [(ngModel)]="house.poolIncluded" type="radio" name="poolIncluded" id="poolIncluded-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="pedestrianFriendly">Pedestrian Friendly</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="pedestrianFriendly-0">
+        <input [(ngModel)]="house.pedestrianFriendly" type="radio" name="pedestrianFriendly" id="pedestrianFriendly-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="pedestrianFriendly-1">
+        <input [(ngModel)]="house.pedestrianFriendly" type="radio" name="pedestrianFriendly" id="pedestrianFriendly-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="petsAllowed">Pets Allowed</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="petsAllowed-0">
+        <input [(ngModel)]="house.petsAllowed" type="radio" name="petsAllowed" id="petsAllowed-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="petsAllowed-1">
+        <input [(ngModel)]="house.petsAllowed" type="radio" name="petsAllowed" id="petsAllowed-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+
+
+</div>
+
+<button class="delete" title="delete house"
+        (click)="delete(house)">
+  Delete Property
+</button>
+<button (click)="save()">save</button>
+<button (click)="goBack()">go back</button>

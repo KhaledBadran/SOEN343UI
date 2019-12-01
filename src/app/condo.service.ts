@@ -19,9 +19,26 @@ export class CondoService {
   constructor(private http: HttpClient) { }
 
   addCondo (newCondo: Condo): Observable<Condo> {
-    console.log('in addCondo of Service');
-    console.log(newCondo);
     return this.http.post<Condo>(this.condosURL, newCondo, this.httpOptions);
   }
+
+  getCondo(id: string): Observable<Condo> {
+    const getURL = `${this.condosURL}/${id}`;
+    return this.http.get<Condo>(getURL);
+  }
+
+  updateCondo (condo: Condo): Observable<any> {
+    console.log('in update Condo');
+    const putURL = `${this.condosURL}/${condo.property.id}`;
+    console.log(condo);
+    console.log(putURL);
+    return this.http.put(putURL, condo , this.httpOptions);
+  }
+
+  deleteCondo (condo: Condo): Observable<any> {
+    const deleteURL = `${this.condosURL}/${condo.property.id}`;
+    return this.http.delete<Condo>(deleteURL, this.httpOptions);
+  }
+
 
 }

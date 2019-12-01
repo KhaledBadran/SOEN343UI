@@ -12,9 +12,9 @@
         <h6>propertyType {{property.propertyType}}</h6>
         <h6>price {{property.price}}</h6>
 
-        <button type="button" class="btn btn-outline-primary" routerLink="/details/{{property.id}}">View Details</button>
-        <button type="button" class="btn btn-outline-primary" routerLink="/edit/{{property.id}}">Edit Details</button>
-        <button type="button" class="btn btn-danger" onclick="delete(property.id);">Edit Details</button>
+        <button type="button" class="btn btn-outline-primary" routerLink="/details/{{property.propertyType}}/{{property.id}}">View Details</button>
+        <button type="button" class="btn btn-outline-primary" routerLink="/edit/{{property.propertyType}}/{{property.id}}">Edit Details</button>
+        <!--<button type="button" class="btn btn-danger" click="deleteProperty(property)">Delete Property</button>-->
 
       </div>
     </div>

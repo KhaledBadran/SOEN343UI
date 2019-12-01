@@ -1,0 +1,13 @@
+<div class="container" *ngIf="condo">
+
+  <div class="col-sm"><img src="../assests/apartment-image.png" alt="Smiley face" height="42" width="42"></div>
+
+  <div class="col-sm">
+    <h2>{{condo.id}} Details</h2>
+    <div><span>id: </span>{{condo.id}}</div>
+  </div>
+</div>
+
+<button class="btn btn-danger" (click)="delete()">Delete Property</button>
+<button (click)="goBack()">go back</button>
+

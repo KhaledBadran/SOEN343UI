@@ -4,13 +4,12 @@ import { Location } from '@angular/common';
 
 import { Apartment } from '../Property';
 import { ApartmentService }  from '../apartment.service';
-
 @Component({
-  selector: 'app-apartment-details',
-  templateUrl: './apartment-details.component.html',
-  styleUrls: ['./apartment-details.component.css']
+  selector: 'app-apartment-edit',
+  templateUrl: './apartment-edit.component.html',
+  styleUrls: ['./apartment-edit.component.css']
 })
-export class ApartmentDetailsComponent implements OnInit {
+export class ApartmentEditComponent implements OnInit {
 
   apartment: Apartment;
 
@@ -24,14 +23,8 @@ export class ApartmentDetailsComponent implements OnInit {
   }
 
   getApartment(): void {
-    console.log('in getApt in apt-details component');
-    console.log(this.route.snapshot.paramMap.get('id'));
-
     const id = this.route.snapshot.paramMap.get('id'); // + converts string to a number.
-    console.log('id is');
-    console.log(id);
 
-    // get the apartment data from the Apartment service.
     this.apartmentService.getApartment(id)
       .subscribe(apartment => this.apartment = apartment);
   }
@@ -40,13 +33,14 @@ export class ApartmentDetailsComponent implements OnInit {
     this.location.back();
   }
 
-  //save(): void {
-  // this.apartmentService.updateApartment(this.apartment)
-  //   .subscribe(() => this.goBack());
-  //}
+  save(): void {
+   this.apartmentService.updateApartment(this.apartment)
+     .subscribe(() => this.goBack());
+  }
 
   delete(): void {
    this.apartmentService.deleteApartment(this.apartment).subscribe();
    this.goBack();
   }
+
 }

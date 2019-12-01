@@ -17,6 +17,11 @@ import { ApartmentFormComponent } from './apartment-form/apartment-form.componen
 import { HouseFormComponent } from './house-form/house-form.component';
 import { CondoFormComponent } from './condo-form/condo-form.component';
 import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
+import { HouseDetailsComponent } from './house-details/house-details.component';
+import { CondoDetailsComponent } from './condo-details/condo-details.component';
+import { ApartmentEditComponent } from './apartment-edit/apartment-edit.component';
+import { CondoEditComponent } from './condo-edit/condo-edit.component';
+import { HouseEditComponent } from './house-edit/house-edit.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,11 @@ import { ApartmentDetailsComponent } from './apartment-details/apartment-details
     HouseFormComponent,
     CondoFormComponent,
     ApartmentDetailsComponent,
+    HouseDetailsComponent,
+    CondoDetailsComponent,
+    ApartmentEditComponent,
+    CondoEditComponent,
+    HouseEditComponent,
     ],
   imports: [
     BrowserModule,

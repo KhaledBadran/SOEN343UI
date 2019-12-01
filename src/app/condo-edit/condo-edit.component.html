@@ -1,0 +1,240 @@
+<div class="container" *ngIf="condo">
+
+  <div class="col-sm"><img src="../assests/condo-image.png" alt="Smiley face" height="42" width="42"></div>
+  <h2>{{condo.id}}</h2>
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="address">Property Address Number</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="condo.property.address.address" placeholder="+{{condo.property.address.address}}" id="address" name="address" type="number" class="form-control input-md">
+
+    </div>
+  </div>
+
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="textinput">Street</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="condo.property.address.street" placeholder="{{condo.property.address.street}}" id="textinput" name="textinput" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="city">City</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="condo.property.address.city" placeholder="{{condo.property.address.city}}" id="city" name="city" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="province">Province</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="condo.property.address.province" placeholder="{{condo.property.address.province}}" id="province" name="province" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="country">Country</label>
+    <div class="col-md-4">
+      <input [(ngModel)]="condo.property.address.country" placeholder="{{condo.property.address.country}}" id="country" name="country" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="postalCode">Postal Code</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="condo.property.address.postalCode" placeholder="{{condo.property.address.postalCode}}" id="postalCode" name="postalCode" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+
+  <legend>Apartment Details</legend>
+
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="bedrooms">Bedrooms</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="condo.property.bedrooms" placeholder="{{condo.property.bedrooms}}" id="bedrooms" name="bedrooms" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="bathrooms">Bathrooms</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="condo.property.bathrooms" placeholder="{{condo.property.bathrooms}}" id="bathrooms" name="bathrooms" type="text" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="parkingSpaces">Parking Spaces</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="condo.property.parkingSpaces" placeholder="{{condo.property.parkingSpaces}}" id="parkingSpaces" name="parkingSpaces" type="number" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="price">Price</label>
+    <div class="col-md-2">
+      <input [(ngModel)]="condo.property.price" placeholder="{{condo.property.price}}" id="price" name="price" type="number" class="form-control input-md">
+
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="gymIncluded">Gym Included</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="gymIncluded-0">
+        <div *ngIf="condo.gymIncluded; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <input [(ngModel)]="condo.gymIncluded" type="radio" name="gymIncluded" id="gymIncluded-0" value=true checked="checked">
+        </ng-template>
+        <ng-template #elseBlock>
+          <input [(ngModel)]="condo.gymIncluded" type="radio" name="gymIncluded" id="gymIncluded-0" value=true>
+        </ng-template>
+        Yes
+      </label>
+      <label class="radio-inline" for="gymIncluded-1">
+        <div *ngIf="condo.gymIncluded; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <input ngModel type="radio" name="gymIncluded" id="gymIncluded-1" value=false>
+        </ng-template>
+        <ng-template #elseBlock>
+          <input ngModel type="radio" name="gymIncluded" id="gymIncluded-1" value=false checked="checked">
+        </ng-template>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="storageIncluded">Storage Included</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="storageIncluded-0">
+        <input [(ngModel)]="condo.storageIncluded" type="radio" name="storageIncluded" id="storageIncluded-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="storageIncluded-1">
+        <input [(ngModel)]="condo.storageIncluded" type="radio" name="storageIncluded" id="storageIncluded-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="elevatorIncluded">Elevator Included</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="elevatorIncluded-0">
+        <input [(ngModel)]="condo.elevatorIncluded" type="radio" name="elevatorIncluded" id="elevatorIncluded-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="elevatorIncluded-1">
+        <input [(ngModel)]="condo.elevatorIncluded" type="radio" name="elevatorIncluded" id="elevatorIncluded-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="outdoorAreasIncluded">Outdoor Areas Included</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="outdoorAreasIncluded-0">
+        <input [(ngModel)]="condo.outdoorAreasIncluded" type="radio" name="outdoorAreasIncluded" id="outdoorAreasIncluded-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="outdoorAreasIncluded-1">
+        <input [(ngModel)]="condo.outdoorAreasIncluded" type="radio" name="outdoorAreasIncluded" id="outdoorAreasIncluded-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="buildingInsurance">Building Insurance</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="buildingInsurance-0">
+        <input [(ngModel)]="condo.buildingInsurance" type="radio" name="buildingInsurance" id="buildingInsurance-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="buildingInsurance-1">
+        <input [(ngModel)]="condo.buildingInsurance" type="radio" name="buildingInsurance" id="buildingInsurance-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="airConditioning">Air Conditioning</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="airConditioning-0">
+        <input [(ngModel)]="condo.airConditioning" type="radio" name="airConditioning" id="airConditioning-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="airConditioning-1">
+        <input [(ngModel)]="condo.airConditioning" type="radio" name="airConditioning" id="airConditioning-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="petsAllowed">Pets Allowed</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="petsAllowed-0">
+        <input [(ngModel)]="condo.petsAllowed" type="radio" name="petsAllowed" id="petsAllowed-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="petsAllowed-1">
+        <input [(ngModel)]="condo.petsAllowed" type="radio" name="petsAllowed" id="petsAllowed-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+  <!-- Multiple Radios (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="conciergeIncluded">Concierge Included</label>
+    <div class="col-md-4">
+      <label class="radio-inline" for="conciergeIncluded-0">
+        <input [(ngModel)]="condo.conciergeIncluded" type="radio" name="conciergeIncluded" id="conciergeIncluded-0" value=true checked="checked">
+        Yes
+      </label>
+      <label class="radio-inline" for="conciergeIncluded-1">
+        <input [(ngModel)]="condo.conciergeIncluded" type="radio" name="conciergeIncluded" id="conciergeIncluded-1" value=false>
+        No
+      </label>
+    </div>
+  </div>
+
+
+
+</div>
+
+<button class="delete" title="delete condo"
+        (click)="delete(condo)">
+  Delete Property
+</button>
+<button (click)="save()">save</button>
+<button (click)="goBack()">go back</button>

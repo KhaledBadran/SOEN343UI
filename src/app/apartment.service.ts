@@ -19,26 +19,24 @@ export class ApartmentService {
   constructor(private http: HttpClient) { }
 
   addApartment (newApartment: Apartment): Observable<Apartment> {
-    console.log('in addApartment of Service');
-    console.log(newApartment);
     return this.http.post<Apartment>(this.apartmentsURL, newApartment, this.httpOptions);
   }
 
-  getApartment(id: number): Observable<Apartment> {
-    console.log('in getApartment in apartment service');
+  getApartment(id: string): Observable<Apartment> {
     const getURL = `${this.apartmentsURL}/${id}`;
-    console.log('getURL is:');
-    console.log(getURL);
     return this.http.get<Apartment>(getURL);
   }
 
   updateApartment (apartment: Apartment): Observable<any> {
-    const putURL = `${this.apartmentsURL}/${apartment.id}`;
-    return this.http.put(putURL, apartment, this.httpOptions);
+    console.log('in update Apartment');
+    const putURL = `${this.apartmentsURL}/${apartment.property.id}`;
+    console.log(apartment);
+    console.log(putURL);
+    return this.http.put(putURL, apartment , this.httpOptions);
   }
 
   deleteApartment (apartment: Apartment): Observable<any> {
-    const deleteURL = `${this.apartmentsURL}/${apartment.id}`;
+    const deleteURL = `${this.apartmentsURL}/${apartment.property.id}`;
     return this.http.delete<Apartment>(deleteURL, this.httpOptions);
   }
 
