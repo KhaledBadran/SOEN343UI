@@ -22,6 +22,9 @@ import { CondoDetailsComponent } from './condo-details/condo-details.component';
 import { ApartmentEditComponent } from './apartment-edit/apartment-edit.component';
 import { CondoEditComponent } from './condo-edit/condo-edit.component';
 import { HouseEditComponent } from './house-edit/house-edit.component';
+import {MatCardModule} from '@angular/material';
+
+
 
 @NgModule({
   declarations: [
@@ -46,7 +49,8 @@ import { HouseEditComponent } from './house-edit/house-edit.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
