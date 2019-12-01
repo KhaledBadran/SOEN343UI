@@ -1,13 +1,23 @@
-<div class="container" *ngIf="apartment">
 
-  <div class="col-sm"><img src="../assests/apartment-image.png" alt="Smiley face" height="42" width="42"></div>
-
-  <div class="col-sm">
-    <h2>{{apartment.id}} Details</h2>
-    <div><span>id: </span>{{apartment.id}}</div>
-  </div>
+<div class="list-group spaceTop" *ngIf="apartment">
+    
+  <h2  class="list-group-item list-group-item-action list-group-item-primary"><strong>APARTMENT ID: </strong>{{apartment.id}}</h2>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-danger"><strong>Price:</strong> {{apartment.property.price}}$</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Address:</strong> {{apartment.property.address.address}} {{apartment.property.address.street}}, {{apartment.property.address.city}}, {{apartment.property.address.province}}, {{apartment.property.address.country}}, {{apartment.property.address.postalCode}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Pets Allowed:</strong> {{apartment.property.petsAllowed}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Number of Bedrooms:</strong> {{apartment.property.bedrooms}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Number of Bathrooms:</strong> {{apartment.property.bathrooms}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Laundry Included:</strong> {{apartment.laundryIncluded}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Heating Included:</strong> {{apartment.heatingIncluded}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Electricity Included:</strong> {{apartment.electricityIncluded}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Internet Included:</strong> {{apartment.internetIncluded}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Furnished:</strong> {{apartment.furnished}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Air conditioning Included:</strong> {{apartment.airConditioning}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Smokers Accepted:</strong> {{apartment.smokersAccepted}}</p>
 </div>
 
-<button class="btn btn-danger" (click)="delete()">Delete Property</button>
-<button (click)="goBack()">go back</button>
+<div class="spaceTop">
+<button type="button" class="btn btn-lg btn-primary spaceRight" (click)="delete()">Delete Property</button>
+<button type="button" class="btn btn-secondary btn-lg" (click)="goBack()">Go back</button>
+</div>
 
