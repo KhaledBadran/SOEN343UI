@@ -1,13 +1,20 @@
-<div class="container" *ngIf="house">
-
-  <div class="col-sm"><img src="../assests/apartment-image.png" alt="Smiley face" height="42" width="42"></div>
-
-  <div class="col-sm">
-    <h2>{{house.id}} Details</h2>
-    <div><span>id: </span>{{house.id}}</div>
-  </div>
+<div class="list-group spaceTop" *ngIf="house">
+    
+  <h2  class="list-group-item list-group-item-action list-group-item-primary"><strong>HOUSE ID: </strong>{{house.id}}</h2>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-danger"><strong>Price:</strong> {{house.property.price}}$</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Address:</strong> {{house.property.address.address}} {{house.property.address.street}}, {{house.property.address.city}}, {{house.property.address.province}}, {{house.property.address.country}}, {{house.property.address.postalCode}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Pets Allowed:</strong> {{house.property.petsAllowed}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Number of Bedrooms:</strong> {{house.property.bedrooms}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Number of Bathrooms:</strong> {{house.property.bathrooms}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Transit Friendly:</strong> {{house.transitFriendly}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Private Backyard Included:</strong> {{house.privateBackyardIncluded}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Pool Included:</strong> {{house.poolIncluded}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Basement Included:</strong> {{house.basementIncluded}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Pedestian Friendly:</strong> {{house.pedestrianFriendly}}</p>
+  <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Year Built:</strong> {{house.yearBuilt}}</p>
 </div>
 
-<button class="btn btn-danger" (click)="delete()">Delete Property</button>
-<button (click)="goBack()">go back</button>
-
+<div class="spaceTop">
+<button type="button" class="btn btn-lg btn-primary spaceRight" (click)="delete()">Delete Property</button>
+<button type="button" class="btn btn-secondary btn-lg" (click)="goBack()">Go back</button>
+</div>
