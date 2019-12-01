@@ -4,107 +4,74 @@
     <!-- Form Name -->
     <legend>Address</legend>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="address">Property Address Number</label>
-      <div class="col-md-4">
-        <input ngModel id="address" name="address" type="text" placeholder="1445" class="form-control input-md">
-
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="address">Address Number</label>
+        <input ngModel id="address" name="address" type="number" placeholder="1445" class="form-control input-md">
       </div>
+      <div class="form-group col-md-6">
+        <label for="street">Street</label>
+        <input ngModel id="street" name="street" type="text" placeholder=" Boulevard de Maisonneuve O" class="form-control input-md">
+      </div>
+
     </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Street</label>
-      <div class="col-md-4">
-        <input ngModel id="textinput" name="textinput" type="text" placeholder=" Boulevard de Maisonneuve O" class="form-control input-md">
-
-      </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="city">City</label>
-      <div class="col-md-4">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="city">City</label>
         <input ngModel id="city" name="city" type="text" placeholder="Montreal" class="form-control input-md">
-
       </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="province">Province</label>
-      <div class="col-md-4">
+      <div class="form-group col-md-3">
+        <label for="province">Province</label>
         <input ngModel id="province" name="province" type="text" placeholder="QC" class="form-control input-md">
-
       </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="country">Country</label>
-      <div class="col-md-4">
+      <div class="form-group col-md-3">
+        <label for="country">Country</label>
         <input ngModel id="country" name="country" type="text" placeholder="Canada" class="form-control input-md">
-
       </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="postalCode">Postal Code</label>
-      <div class="col-md-2">
+      <div class="form-group col-md-3">
+        <label for="postalCode">PostalCode</label>
         <input ngModel id="postalCode" name="postalCode" type="text" placeholder="H3G 1M8" class="form-control input-md">
-
       </div>
     </div>
 
     <legend>House Details</legend>
 
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="bedrooms">Bedrooms</label>
+        <input ngModel id="bedrooms" name="bedrooms" type="number" placeholder="3" class="form-control input-md">
+      </div>
+    </div>
+    <div class="form-row">
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="bedrooms">Bedrooms</label>
-      <div class="col-md-2">
-        <input ngModel id="bedrooms" name="bedrooms" type="text" placeholder="3" class="form-control input-md">
-
+      <div class="form-group col-md-3">
+        <label for="bathrooms">Bathrooms</label>
+        <input ngModel id="bathrooms" name="bathrooms" type="number" placeholder="2" class="form-control input-md">
       </div>
     </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="bathrooms">Bathrooms</label>
-      <div class="col-md-2">
-        <input ngModel id="bathrooms" name="bathrooms" type="text" placeholder="2" class="form-control input-md">
-
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="parkingSpaces">ParkingSpaces</label>
+        <input ngModel id="parkingSpaces" name="parkingSpaces" type="number" placeholder="2" class="form-control input-md">
       </div>
     </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="parkingSpaces">Parking Spaces</label>
-      <div class="col-md-2">
-        <input ngModel id="parkingSpaces" name="parkingSpaces" type="text" placeholder="2" class="form-control input-md">
-
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="price">Price</label>
+        <input ngModel id="price" name="price" type="number" placeholder="235,000" class="form-control input-md">
       </div>
     </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="price">Price</label>
-      <div class="col-md-2">
-        <input ngModel id="price" name="price" type="text" placeholder="235,000" class="form-control input-md">
-
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="yearBuilt">Year Built</label>
+        <input ngModel id="yearBuilt" name="yearBuilt" type="number" placeholder="1996" class="form-control input-md">
       </div>
     </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="yearBuilt">Year Built</label>
-      <div class="col-md-2">
-        <input ngModel id="yearBuilt" name="yearBuilt" type="text" placeholder="1996" class="form-control input-md">
-
-      </div>
-    </div>
 
     <!-- Multiple Radios (inline) -->
     <div class="form-group">
@@ -214,6 +181,8 @@
 
   </fieldset>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-
+  <div class="spaceTop">
+    <button type="submit" class="btn btn-primary btn-lg spaceRight">Submit</button>
+    <button type="button" class="btn btn-secondary btn-lg spaceRight" (click)="goBack()" style="margin-left:5px;">Go back</button>
+  </div>
 </form>

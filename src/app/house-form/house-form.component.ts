@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { House }    from '../Property';
 import { HouseService } from '../house.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -12,9 +14,17 @@ export class HouseFormComponent implements OnInit {
 
   submittedHouse: House;
 
-  constructor(private houseService: HouseService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private houseService: HouseService,
+    private location: Location) {}
+
 
   ngOnInit() {
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   addHouse(newHouse: House): void {
@@ -54,7 +64,7 @@ export class HouseFormComponent implements OnInit {
 
     console.log(this.submittedHouse);
     this.addHouse(this.submittedHouse);
-
+    this.goBack();
   }
 
 }

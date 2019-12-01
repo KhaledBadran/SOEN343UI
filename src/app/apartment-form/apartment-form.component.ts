@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Apartment }    from '../Property';
 import { NgForm }   from '@angular/forms';
 import { ApartmentService } from '../apartment.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -13,9 +15,16 @@ export class ApartmentFormComponent implements OnInit {
 
   submittedApartment: Apartment;
 
-  constructor(private apartmentService: ApartmentService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private apartmentService: ApartmentService,
+    private location: Location) {}
 
   ngOnInit() {
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   addApartment(newApartment: Apartment): void {
@@ -24,6 +33,8 @@ export class ApartmentFormComponent implements OnInit {
     this.apartmentService.addApartment(newApartment)
       .subscribe();
   }
+
+
 
   onSubmit(f){
     this.submittedApartment = new Apartment();
@@ -56,6 +67,7 @@ export class ApartmentFormComponent implements OnInit {
 
     console.log(this.submittedApartment);
     this.addApartment(this.submittedApartment);
+    this.goBack();
 
   }
 

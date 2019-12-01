@@ -67,6 +67,7 @@ export class Apartment {
   airConditioning: boolean;
   smokersAccepted: boolean;
 
+
    constructor() { 
     this.property = new Property(PropertyType.Apartment); // call the Apartment enum
     this.laundryIncluded= false;
@@ -89,6 +90,7 @@ export class House {
   basementIncluded: boolean;
   pedestrianFriendly: boolean;
   yearBuilt: number;
+
 
    constructor() { 
     this.property = new Property(PropertyType.House); // call the House enum
@@ -122,5 +124,6 @@ export class Condo {
     this.conciergeIncluded= false;
     this.airConditioning= false;
     this.buildingInsurance= false;
+
    }
 }

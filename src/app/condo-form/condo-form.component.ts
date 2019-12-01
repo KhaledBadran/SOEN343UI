@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Condo }    from '../Property';
 import { CondoService } from '../condo.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -12,9 +14,17 @@ export class CondoFormComponent implements OnInit {
 
   submittedCondo: Condo;
 
-  constructor(private condoService: CondoService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private condoService: CondoService,
+    private location: Location) {}
+
 
   ngOnInit() {
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   addCondo(newCondo: Condo): void {
@@ -54,7 +64,9 @@ export class CondoFormComponent implements OnInit {
 
     console.log(this.submittedCondo);
     this.addCondo(this.submittedCondo);
+    this.goBack();
 
   }
+
 
 }

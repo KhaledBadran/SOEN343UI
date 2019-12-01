@@ -1,100 +1,69 @@
 <div class="container" *ngIf="condo">
 
-  <div class="col-sm"><img src="../assests/condo-image.png" alt="Smiley face" height="42" width="42"></div>
-  <h2>{{condo.id}}</h2>
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="address">Property Address Number</label>
-    <div class="col-md-4">
-      <input [(ngModel)]="condo.property.address.address" placeholder="+{{condo.property.address.address}}" id="address" name="address" type="number" class="form-control input-md">
 
+  <legend>Address</legend>
+
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="address">Address Number</label>
+      <input [(ngModel)]="condo.property.address.address" placeholder="{{condo.property.address.address}}" id="address" name="address" type="number" class="form-control input-md">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="street">Street</label>
+      <input [(ngModel)]="condo.property.address.street" placeholder="{{condo.property.address.street}}" id="street" name="street" type="text" class="form-control input-md">
     </div>
   </div>
 
-
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="textinput">Street</label>
-    <div class="col-md-4">
-      <input [(ngModel)]="condo.property.address.street" placeholder="{{condo.property.address.street}}" id="textinput" name="textinput" type="text" class="form-control input-md">
-
-    </div>
-  </div>
-
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="city">City</label>
-    <div class="col-md-4">
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="city">City</label>
       <input [(ngModel)]="condo.property.address.city" placeholder="{{condo.property.address.city}}" id="city" name="city" type="text" class="form-control input-md">
-
     </div>
-  </div>
-
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="province">Province</label>
-    <div class="col-md-4">
+    <div class="form-group col-md-3">
+      <label for="province">Province</label>
       <input [(ngModel)]="condo.property.address.province" placeholder="{{condo.property.address.province}}" id="province" name="province" type="text" class="form-control input-md">
-
     </div>
-  </div>
-
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="country">Country</label>
-    <div class="col-md-4">
+    <div class="form-group col-md-3">
+      <label for="country">Country</label>
       <input [(ngModel)]="condo.property.address.country" placeholder="{{condo.property.address.country}}" id="country" name="country" type="text" class="form-control input-md">
-
     </div>
-  </div>
-
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="postalCode">Postal Code</label>
-    <div class="col-md-2">
+    <div class="form-group col-md-3">
+      <label for="postalCode">PostalCode</label>
       <input [(ngModel)]="condo.property.address.postalCode" placeholder="{{condo.property.address.postalCode}}" id="postalCode" name="postalCode" type="text" class="form-control input-md">
-
     </div>
   </div>
 
+  <legend>condo Details</legend>
 
-  <legend>Apartment Details</legend>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="bedrooms">Bedrooms</label>
+      <input [(ngModel)]="condo.property.bedrooms" placeholder="{{condo.property.bedrooms}}" id="bedrooms" name="bedrooms" type="number" class="form-control input-md">
+    </div>
+  </div>
+  <div class="form-row">
 
-
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="bedrooms">Bedrooms</label>
-    <div class="col-md-2">
-      <input [(ngModel)]="condo.property.bedrooms" placeholder="{{condo.property.bedrooms}}" id="bedrooms" name="bedrooms" type="text" class="form-control input-md">
-
+    <div class="form-group col-md-3">
+      <label for="bathrooms">Bathrooms</label>
+      <input [(ngModel)]="condo.property.bathrooms" placeholder="{{condo.property.bathrooms}}" id="bathrooms" name="bathrooms" type="number" class="form-control input-md">
     </div>
   </div>
 
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="bathrooms">Bathrooms</label>
-    <div class="col-md-2">
-      <input [(ngModel)]="condo.property.bathrooms" placeholder="{{condo.property.bathrooms}}" id="bathrooms" name="bathrooms" type="text" class="form-control input-md">
-
-    </div>
-  </div>
-
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="parkingSpaces">Parking Spaces</label>
-    <div class="col-md-2">
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="parkingSpaces">ParkingSpaces</label>
       <input [(ngModel)]="condo.property.parkingSpaces" placeholder="{{condo.property.parkingSpaces}}" id="parkingSpaces" name="parkingSpaces" type="number" class="form-control input-md">
-
     </div>
   </div>
 
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="price">Price</label>
-    <div class="col-md-2">
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="price">Price</label>
       <input [(ngModel)]="condo.property.price" placeholder="{{condo.property.price}}" id="price" name="price" type="number" class="form-control input-md">
-
     </div>
   </div>
+
+
 
   <!-- Multiple Radios (inline) -->
   <div class="form-group">
@@ -232,9 +201,8 @@
 
 </div>
 
-<button class="delete" title="delete condo"
-        (click)="delete(condo)">
-  Delete Property
-</button>
-<button (click)="save()">save</button>
-<button (click)="goBack()">go back</button>
+<div class="spaceTop">
+  <button class="btn btn-primary btn-lg spaceRight" (click)="save()">Save Changes</button>
+  <button class="btn btn-lg btn-danger spaceRight" title="delete condo" (click)="delete(condo)" style="margin-left:5px;">Delete Property</button>
+  <button class="btn btn-secondary btn-lg" (click)="goBack()" style="margin-left:5px;">go back</button>
+</div>

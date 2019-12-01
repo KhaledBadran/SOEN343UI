@@ -6,12 +6,9 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PropertiesComponent } from './properties/properties.component';
-import { PropertyDetailsComponent } from './property-details/property-details.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
-import { PropertyEditComponent } from './property-edit/property-edit.component';
-import { PropertyAddComponent } from './property-add/property-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApartmentFormComponent } from './apartment-form/apartment-form.component';
 import { HouseFormComponent } from './house-form/house-form.component';
@@ -23,6 +20,8 @@ import { ApartmentEditComponent } from './apartment-edit/apartment-edit.componen
 import { CondoEditComponent } from './condo-edit/condo-edit.component';
 import { HouseEditComponent } from './house-edit/house-edit.component';
 import {MatCardModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -30,10 +29,7 @@ import {MatCardModule} from '@angular/material';
   declarations: [
     AppComponent,
     PropertiesComponent,
-    PropertyDetailsComponent,
     NavbarComponent,
-    PropertyEditComponent,
-    PropertyAddComponent,
     ApartmentFormComponent,
     HouseFormComponent,
     CondoFormComponent,
@@ -43,6 +39,7 @@ import {MatCardModule} from '@angular/material';
     ApartmentEditComponent,
     CondoEditComponent,
     HouseEditComponent,
+    FooterComponent,
     ],
   imports: [
     BrowserModule,
@@ -50,7 +47,8 @@ import {MatCardModule} from '@angular/material';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
