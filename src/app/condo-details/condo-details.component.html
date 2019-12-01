@@ -1,13 +1,22 @@
-<div class="container" *ngIf="condo">
 
-  <div class="col-sm"><img src="../assests/apartment-image.png" alt="Smiley face" height="42" width="42"></div>
+<!-- <div class="col-sm"><img src="../../assets/property-image.png" alt="Smiley face" height="300" width="500"></div> -->
 
-  <div class="col-sm">
-    <h2>{{condo.id}} Details</h2>
-    <div><span>id: </span>{{condo.id}}</div>
+<div class="list-group spaceTop" *ngIf="condo">
+    
+    <h2  class="list-group-item list-group-item-action list-group-item-primary"><strong>CONDO ID: </strong>{{condo.id}}</h2>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-secondary"><strong>Address:</strong> {{condo.property.address.address}} {{condo.property.address.street}}, {{condo.property.address.city}}, {{condo.property.address.country}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Elevator Included:</strong> {{condo.elevatorIncluded}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Storage Included:</strong> {{condo.storageIncluded}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Outdoor Areas Included:</strong> {{condo.outdoorAreasIncluded}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Gym Included:</strong> {{condo.gymIncluded}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Concierge Included:</strong> {{condo.conciergeIncluded}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Air conditioning Included:</strong> {{condo.airConditioning}}</p>
+    <p href="#" class="list-group-item list-group-item-action list-group-item-light"><strong>Building Insurance Included:</strong> {{condo.buildingInsurance}}</p>
   </div>
+
+  <div class="spaceTop">
+  <button type="button" class="btn btn-lg btn-primary spaceRight" (click)="delete()">Delete Property</button>
+  <button type="button" class="btn btn-secondary btn-lg" (click)="goBack()">go back</button>
 </div>
 
-<button class="btn btn-danger" (click)="delete()">Delete Property</button>
-<button (click)="goBack()">go back</button>
 
