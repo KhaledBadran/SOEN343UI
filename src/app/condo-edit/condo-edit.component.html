@@ -65,138 +65,41 @@
 
 
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="gymIncluded">Gym Included</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="gymIncluded-0">
-        <div *ngIf="condo.gymIncluded; then thenBlock else elseBlock"></div>
-        <ng-template #thenBlock>
-          <input [(ngModel)]="condo.gymIncluded" type="radio" name="gymIncluded" id="gymIncluded-0" value=true checked="checked">
-        </ng-template>
-        <ng-template #elseBlock>
-          <input [(ngModel)]="condo.gymIncluded" type="radio" name="gymIncluded" id="gymIncluded-0" value=true>
-        </ng-template>
-        Yes
-      </label>
-      <label class="radio-inline" for="gymIncluded-1">
-        <div *ngIf="condo.gymIncluded; then thenBlock else elseBlock"></div>
-        <ng-template #thenBlock>
-          <input ngModel type="radio" name="gymIncluded" id="gymIncluded-1" value=false>
-        </ng-template>
-        <ng-template #elseBlock>
-          <input ngModel type="radio" name="gymIncluded" id="gymIncluded-1" value=false checked="checked">
-        </ng-template>
-        No
-      </label>
+  <legend>Extra Details</legend>
+  <div class="container my-3">
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="condo.gymIncluded" name="gymIncluded" id="gymIncluded" value=true labelPosition="after">Gym Included</mat-checkbox>
     </div>
-  </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="storageIncluded">Storage Included</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="storageIncluded-0">
-        <input [(ngModel)]="condo.storageIncluded" type="radio" name="storageIncluded" id="storageIncluded-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="storageIncluded-1">
-        <input [(ngModel)]="condo.storageIncluded" type="radio" name="storageIncluded" id="storageIncluded-1" value=false>
-        No
-      </label>
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="condo.storageIncluded" name="storageIncluded" id="storageIncluded" value=true labelPosition="after">Storatge Included</mat-checkbox>
     </div>
-  </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="elevatorIncluded">Elevator Included</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="elevatorIncluded-0">
-        <input [(ngModel)]="condo.elevatorIncluded" type="radio" name="elevatorIncluded" id="elevatorIncluded-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="elevatorIncluded-1">
-        <input [(ngModel)]="condo.elevatorIncluded" type="radio" name="elevatorIncluded" id="elevatorIncluded-1" value=false>
-        No
-      </label>
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="condo.elevatorIncluded" name="elevatorIncluded" id="elevatorIncluded" value=true labelPosition="after">Elevator Included</mat-checkbox>
     </div>
-  </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="outdoorAreasIncluded">Outdoor Areas Included</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="outdoorAreasIncluded-0">
-        <input [(ngModel)]="condo.outdoorAreasIncluded" type="radio" name="outdoorAreasIncluded" id="outdoorAreasIncluded-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="outdoorAreasIncluded-1">
-        <input [(ngModel)]="condo.outdoorAreasIncluded" type="radio" name="outdoorAreasIncluded" id="outdoorAreasIncluded-1" value=false>
-        No
-      </label>
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="condo.outdoorAreasIncluded" name="outdoorAreasIncluded" id="outdoorAreasIncluded" value=true labelPosition="after">Outdoor Areas Included</mat-checkbox>
     </div>
-  </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="buildingInsurance">Building Insurance</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="buildingInsurance-0">
-        <input [(ngModel)]="condo.buildingInsurance" type="radio" name="buildingInsurance" id="buildingInsurance-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="buildingInsurance-1">
-        <input [(ngModel)]="condo.buildingInsurance" type="radio" name="buildingInsurance" id="buildingInsurance-1" value=false>
-        No
-      </label>
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="condo.buildingInsurance" name="buildingInsurance" id="buildingInsurance" value=true labelPosition="after">Building Insurence</mat-checkbox>
     </div>
-  </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="airConditioning">Air Conditioning</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="airConditioning-0">
-        <input [(ngModel)]="condo.airConditioning" type="radio" name="airConditioning" id="airConditioning-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="airConditioning-1">
-        <input [(ngModel)]="condo.airConditioning" type="radio" name="airConditioning" id="airConditioning-1" value=false>
-        No
-      </label>
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="condo.airConditioning" name="airConditioning" id="airConditioning" value=true labelPosition="after">Air Conditioning</mat-checkbox>
     </div>
-  </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="petsAllowed">Pets Allowed</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="petsAllowed-0">
-        <input [(ngModel)]="condo.petsAllowed" type="radio" name="petsAllowed" id="petsAllowed-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="petsAllowed-1">
-        <input [(ngModel)]="condo.petsAllowed" type="radio" name="petsAllowed" id="petsAllowed-1" value=false>
-        No
-      </label>
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="condo.property.petsAllowed" name="petsAllowed" id="petsAllowed" value=true labelPosition="after">Pets Allowed</mat-checkbox>
     </div>
-  </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="conciergeIncluded">Concierge Included</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="conciergeIncluded-0">
-        <input [(ngModel)]="condo.conciergeIncluded" type="radio" name="conciergeIncluded" id="conciergeIncluded-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="conciergeIncluded-1">
-        <input [(ngModel)]="condo.conciergeIncluded" type="radio" name="conciergeIncluded" id="conciergeIncluded-1" value=false>
-        No
-      </label>
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="condo.conciergeIncluded" name="conciergeIncluded" id="conciergeIncluded" value=true labelPosition="after">Concierge Included</mat-checkbox>
     </div>
-  </div>
 
+  </div>
 
 
 </div>

@@ -1,3 +1,5 @@
+
+
 <form (ngSubmit)="onSubmit(f)" class="form-horizontal" #f="ngForm">
   <fieldset>
 
@@ -37,6 +39,7 @@
 
     <legend>Apartment Details</legend>
 
+
     <div class="form-row">
       <div class="form-group col-md-3">
         <label for="bedrooms">Bedrooms</label>
@@ -66,125 +69,40 @@
       </div>
     </div>
 
-
-    <!-- Multiple Radios (inline) -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="internetIncluded">Internet Included</label>
-      <div class="col-md-4">
-        <label class="radio-inline" for="internetIncluded-0">
-          <input ngModel type="radio" name="internetIncluded" id="internetIncluded-0" value=true checked="checked">
-          Yes
-        </label>
-        <label class="radio-inline" for="internetIncluded-1">
-          <input ngModel type="radio" name="internetIncluded" id="internetIncluded-1" value=false>
-          No
-        </label>
+    <legend>Extra Details</legend>
+    <div class="container my-3">
+      <div class="form-row">
+        <mat-checkbox ngModel name="internetIncluded" id="internetIncluded" value=true labelPosition="after">Internet Included</mat-checkbox>
       </div>
-    </div>
 
-    <!-- Multiple Radios (inline) -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="heatingIncluded">Heating Included</label>
-      <div class="col-md-4">
-        <label class="radio-inline" for="heatingIncluded-0">
-          <input ngModel type="radio" name="heatingIncluded" id="heatingIncluded-0" value=true checked="checked">
-          Yes
-        </label>
-        <label class="radio-inline" for="heatingIncluded-1">
-          <input ngModel type="radio" name="heatingIncluded" id="heatingIncluded-1" value=false>
-          No
-        </label>
+      <div class="form-row">
+        <mat-checkbox ngModel name="heatingIncluded" id="heatingIncluded" value=true labelPosition="after">Heating Included</mat-checkbox>
       </div>
-    </div>
 
-    <!-- Multiple Radios (inline) -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="laundryIncluded">Laundry Included</label>
-      <div class="col-md-4">
-        <label class="radio-inline" for="laundryIncluded-0">
-          <input ngModel type="radio" name="laundryIncluded" id="laundryIncluded-0" value=true checked="checked">
-          Yes
-        </label>
-        <label class="radio-inline" for="laundryIncluded-1">
-          <input ngModel type="radio" name="laundryIncluded" id="laundryIncluded-1" value=false>
-          No
-        </label>
+      <div class="form-row">
+        <mat-checkbox ngModel name="laundryIncluded" id="laundryIncluded" value=true labelPosition="after">Laundry Included</mat-checkbox>
       </div>
-    </div>
 
-    <!-- Multiple Radios (inline) -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="electricityIncluded">Electricity Included</label>
-      <div class="col-md-4">
-        <label class="radio-inline" for="electricityIncluded-0">
-          <input ngModel type="radio" name="electricityIncluded" id="electricityIncluded-0" value=true checked="checked">
-          Yes
-        </label>
-        <label class="radio-inline" for="electricityIncluded-1">
-          <input ngModel type="radio" name="electricityIncluded" id="electricityIncluded-1" value=false>
-          No
-        </label>
+      <div class="form-row">
+        <mat-checkbox ngModel name="electricityIncluded" id="electricityIncluded" value=true labelPosition="after">Electricity Included</mat-checkbox>
       </div>
-    </div>
 
-    <!-- Multiple Radios (inline) -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="smokersAccepted">Smokers Accepted</label>
-      <div class="col-md-4">
-        <label class="radio-inline" for="smokersAccepted-0">
-          <input ngModel type="radio" name="smokersAccepted" id="smokersAccepted-0" value=true checked="checked">
-          Yes
-        </label>
-        <label class="radio-inline" for="smokersAccepted-1">
-          <input ngModel type="radio" name="smokersAccepted" id="smokersAccepted-1" value=false>
-          No
-        </label>
+      <div class="form-row">
+        <mat-checkbox ngModel name="smokersAccepted" id="smokersAccepted" value=true labelPosition="after">Smokers Accepted</mat-checkbox>
       </div>
-    </div>
 
-    <!-- Multiple Radios (inline) -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="airConditioning">Air Conditioning</label>
-      <div class="col-md-4">
-        <label class="radio-inline" for="airConditioning-0">
-          <input ngModel type="radio" name="airConditioning" id="airConditioning-0" value=true checked="checked">
-          Yes
-        </label>
-        <label class="radio-inline" for="airConditioning-1">
-          <input ngModel type="radio" name="airConditioning" id="airConditioning-1" value=false>
-          No
-        </label>
+      <div class="form-row">
+        <mat-checkbox ngModel name="airConditioning" id="airConditioning" value=true labelPosition="after">Air Conditioning</mat-checkbox>
       </div>
-    </div>
 
-    <!-- Multiple Radios (inline) -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="petsAllowed">Pets Allowed</label>
-      <div class="col-md-4">
-        <label class="radio-inline" for="petsAllowed-0">
-          <input ngModel type="radio" name="petsAllowed" id="petsAllowed-0" value=true checked="checked">
-          Yes
-        </label>
-        <label class="radio-inline" for="petsAllowed-1">
-          <input ngModel type="radio" name="petsAllowed" id="petsAllowed-1" value=false>
-          No
-        </label>
+      <div class="form-row">
+        <mat-checkbox ngModel name="petsAllowed" id="petsAllowed" value=true labelPosition="after">Pets Allowed</mat-checkbox>
       </div>
-    </div>
 
-    <!-- Multiple Radios (inline) -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="furnished">Furnished</label>
-      <div class="col-md-4">
-        <label class="radio-inline" for="furnished-0">
-          <input ngModel type="radio" name="furnished" id="furnished-0" value=true checked="checked">
-          Yes
-        </label>
-        <label class="radio-inline" for="furnished-1">
-          <input ngModel type="radio" name="furnished" id="furnished-1" value=false>
-          No
-        </label>
+      <div class="form-row">
+        <mat-checkbox ngModel name="airConditioning" id="furnished" value=true labelPosition="after">Furnished</mat-checkbox>
       </div>
+
     </div>
 
   </fieldset>

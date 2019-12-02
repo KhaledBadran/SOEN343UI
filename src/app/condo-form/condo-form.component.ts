@@ -54,13 +54,13 @@ export class CondoFormComponent implements OnInit {
     this.submittedCondo.property.price = +f.value.price;
 
     // Condo Details
-    this.submittedCondo.elevatorIncluded = f.value.elevatorIncluded == 'true' ? true : false;
-    this.submittedCondo.storageIncluded = f.value.storageIncluded == 'true' ? true : false;
-    this.submittedCondo.outdoorAreasIncluded = f.value.outdoorAreasIncluded == 'true' ? true : false;
-    this.submittedCondo.gymIncluded = f.value.gymIncluded == 'true' ? true : false;
-    this.submittedCondo.conciergeIncluded = f.value.conciergeIncluded == 'true' ? true : false;
-    this.submittedCondo.airConditioning = f.value.airConditioning == 'true' ? true : false;
-    this.submittedCondo.buildingInsurance = f.value.buildingInsurance == 'true' ? true : false;
+    this.submittedCondo.elevatorIncluded = f.value.elevatorIncluded == true ? true : false;
+    this.submittedCondo.storageIncluded = f.value.storageIncluded == true ? true : false;
+    this.submittedCondo.outdoorAreasIncluded = f.value.outdoorAreasIncluded == true ? true : false;
+    this.submittedCondo.gymIncluded = f.value.gymIncluded == true ? true : false;
+    this.submittedCondo.conciergeIncluded = f.value.conciergeIncluded == true ? true : false;
+    this.submittedCondo.airConditioning = f.value.airConditioning == true ? true : false;
+    this.submittedCondo.buildingInsurance = f.value.buildingInsurance == true ? true : false;
 
     console.log(this.submittedCondo);
     this.addCondo(this.submittedCondo);

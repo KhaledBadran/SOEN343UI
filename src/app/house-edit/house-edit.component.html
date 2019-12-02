@@ -73,107 +73,35 @@
     </div>
   </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="basementIncluded">Basement Included</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="basementIncluded-0">
-        <div *ngIf="house.basementIncluded; then thenBlock else elseBlock"></div>
-        <ng-template #thenBlock>
-          <input [(ngModel)]="house.basementIncluded" type="radio" name="basementIncluded" id="basementIncluded-0" value=true checked="checked">
-        </ng-template>
-        <ng-template #elseBlock>
-          <input [(ngModel)]="house.basementIncluded" type="radio" name="basementIncluded" id="basementIncluded-0" value=true>
-        </ng-template>
-        Yes
-      </label>
-      <label class="radio-inline" for="basementIncluded-1">
-        <div *ngIf="house.basementIncluded; then thenBlock else elseBlock"></div>
-        <ng-template #thenBlock>
-          <input ngModel type="radio" name="basementIncluded" id="basementIncluded-1" value=false>
-        </ng-template>
-        <ng-template #elseBlock>
-          <input ngModel type="radio" name="basementIncluded" id="basementIncluded-1" value=false checked="checked">
-        </ng-template>
-        No
-      </label>
+
+  <legend>Extra Details</legend>
+  <div class="container my-3">
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="house.transitFriendly" name="transitFriendly" id="transitFriendly" value=true labelPosition="after">Transit Friendly</mat-checkbox>
     </div>
+
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="house.privateBackyardIncluded" name="privateBackyardIncluded" id="privateBackyardIncluded" value=true labelPosition="after">Private Backyard Included</mat-checkbox>
+    </div>
+
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="house.poolIncluded" name="poolIncluded" id="poolIncluded" value=true labelPosition="after">Pool Included</mat-checkbox>
+    </div>
+
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="house.basementIncluded" name="basementIncluded" id="basementIncluded" value=true labelPosition="after">Basement Included</mat-checkbox>
+    </div>
+
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="house.pedestrianFriendly" name="pedestrianFriendly" id="pedestrianFriendly" value=true labelPosition="after">Pedestarian Friendly</mat-checkbox>
+    </div>
+
+    <div class="form-row">
+      <mat-checkbox [(ngModel)]="house.property.petsAllowed" name="petsAllowed" id="petsAllowed" value=true labelPosition="after">Pets Allowed</mat-checkbox>
+    </div>
+
   </div>
 
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="privateBackyardIncluded">Private Backyard Included</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="privateBackyardIncluded-0">
-        <input [(ngModel)]="house.privateBackyardIncluded" type="radio" name="privateBackyardIncluded" id="privateBackyardIncluded-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="privateBackyardIncluded-1">
-        <input [(ngModel)]="house.privateBackyardIncluded" type="radio" name="privateBackyardIncluded" id="privateBackyardIncluded-1" value=false>
-        No
-      </label>
-    </div>
-  </div>
-
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="transitFriendly">Transit Friendly</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="transitFriendly-0">
-        <input [(ngModel)]="house.transitFriendly" type="radio" name="transitFriendly" id="transitFriendly-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="transitFriendly-1">
-        <input [(ngModel)]="house.transitFriendly" type="radio" name="transitFriendly" id="transitFriendly-1" value=false>
-        No
-      </label>
-    </div>
-  </div>
-
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="poolIncluded">Pool Included</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="poolIncluded-0">
-        <input [(ngModel)]="house.poolIncluded" type="radio" name="poolIncluded" id="poolIncluded-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="poolIncluded-1">
-        <input [(ngModel)]="house.poolIncluded" type="radio" name="poolIncluded" id="poolIncluded-1" value=false>
-        No
-      </label>
-    </div>
-  </div>
-
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="pedestrianFriendly">Pedestrian Friendly</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="pedestrianFriendly-0">
-        <input [(ngModel)]="house.pedestrianFriendly" type="radio" name="pedestrianFriendly" id="pedestrianFriendly-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="pedestrianFriendly-1">
-        <input [(ngModel)]="house.pedestrianFriendly" type="radio" name="pedestrianFriendly" id="pedestrianFriendly-1" value=false>
-        No
-      </label>
-    </div>
-  </div>
-
-  <!-- Multiple Radios (inline) -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="petsAllowed">Pets Allowed</label>
-    <div class="col-md-4">
-      <label class="radio-inline" for="petsAllowed-0">
-        <input [(ngModel)]="house.petsAllowed" type="radio" name="petsAllowed" id="petsAllowed-0" value=true checked="checked">
-        Yes
-      </label>
-      <label class="radio-inline" for="petsAllowed-1">
-        <input [(ngModel)]="house.petsAllowed" type="radio" name="petsAllowed" id="petsAllowed-1" value=false>
-        No
-      </label>
-    </div>
-  </div>
 
 
 

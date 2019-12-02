@@ -56,13 +56,13 @@ export class ApartmentFormComponent implements OnInit {
     this.submittedApartment.property.price = +f.value.price;
 
     // Apartment Details
-    this.submittedApartment.laundryIncluded = f.value.laundryIncluded == 'true' ? true : false;
-    this.submittedApartment.heatingIncluded = f.value.heatingIncluded == 'true' ? true : false;
-    this.submittedApartment.electricityIncluded = f.value.electricityIncluded == 'true' ? true : false;
-    this.submittedApartment.internetIncluded = f.value.internetIncluded == 'true' ? true : false;
-    this.submittedApartment.furnished = f.value.furnished == 'true' ? true : false;
-    this.submittedApartment.airConditioning = f.value.airConditioning == 'true' ? true : false;
-    this.submittedApartment.smokersAccepted = f.value.smokersAccepted == 'true' ? true : false;
+    this.submittedApartment.laundryIncluded = f.value.laundryIncluded == true ? true : false;
+    this.submittedApartment.heatingIncluded = f.value.heatingIncluded == true ? true : false;
+    this.submittedApartment.electricityIncluded = f.value.electricityIncluded == true ? true : false;
+    this.submittedApartment.internetIncluded = f.value.internetIncluded == true ? true : false;
+    this.submittedApartment.furnished = f.value.furnished == true ? true : false;
+    this.submittedApartment.airConditioning = f.value.airConditioning == true ? true : false;
+    this.submittedApartment.smokersAccepted = f.value.smokersAccepted == true ? true : false;
 
 
     console.log(this.submittedApartment);

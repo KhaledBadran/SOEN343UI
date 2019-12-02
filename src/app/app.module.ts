@@ -22,6 +22,9 @@ import { HouseEditComponent } from './house-edit/house-edit.component';
 import {MatCardModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -49,6 +52,9 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     MatCardModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

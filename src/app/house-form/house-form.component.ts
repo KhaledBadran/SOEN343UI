@@ -54,11 +54,11 @@ export class HouseFormComponent implements OnInit {
     this.submittedHouse.property.price = +f.value.price;
 
     // House Details
-    this.submittedHouse.transitFriendly = f.value.transitFriendly == 'true' ? true : false;
-    this.submittedHouse.privateBackyardIncluded = f.value.privateBackyardIncluded == 'true' ? true : false;
-    this.submittedHouse.poolIncluded = f.value.poolIncluded == 'true' ? true : false;
-    this.submittedHouse.basementIncluded = f.value.basementIncluded == 'true' ? true : false;
-    this.submittedHouse.pedestrianFriendly = f.value.pedestrianFriendly == 'true' ? true : false;
+    this.submittedHouse.transitFriendly = f.value.transitFriendly == true ? true : false;
+    this.submittedHouse.privateBackyardIncluded = f.value.privateBackyardIncluded == true ? true : false;
+    this.submittedHouse.poolIncluded = f.value.poolIncluded == true ? true : false;
+    this.submittedHouse.basementIncluded = f.value.basementIncluded == true ? true : false;
+    this.submittedHouse.pedestrianFriendly = f.value.pedestrianFriendly == true ? true : false;
     this.submittedHouse.yearBuilt = +f.value.yearBuilt;
 
 
