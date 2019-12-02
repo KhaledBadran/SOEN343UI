@@ -12,3 +12,12 @@
 td {
   padding-right: 8px;
 }
+
+mat-slider {
+  width: 300px;
+}
+
+
+mat-checkbox {
+  margin-top:5px;
+}

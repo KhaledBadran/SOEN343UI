@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div class="form-row">
+  <div class="form-row mb-3">
     <div class="form-group col-md-3">
       <label for="city">City</label>
       <input [(ngModel)]="condo.property.address.city" placeholder="{{condo.property.address.city}}" id="city" name="city" type="text" class="form-control input-md">
@@ -35,28 +35,22 @@
 
   <legend>condo Details</legend>
 
-  <div class="form-row">
+  <div class="form-row mb-3">
     <div class="form-group col-md-3">
       <label for="bedrooms">Bedrooms</label>
       <input [(ngModel)]="condo.property.bedrooms" placeholder="{{condo.property.bedrooms}}" id="bedrooms" name="bedrooms" type="number" class="form-control input-md">
     </div>
-  </div>
-  <div class="form-row">
 
     <div class="form-group col-md-3">
       <label for="bathrooms">Bathrooms</label>
       <input [(ngModel)]="condo.property.bathrooms" placeholder="{{condo.property.bathrooms}}" id="bathrooms" name="bathrooms" type="number" class="form-control input-md">
     </div>
-  </div>
 
-  <div class="form-row">
     <div class="form-group col-md-3">
       <label for="parkingSpaces">ParkingSpaces</label>
       <input [(ngModel)]="condo.property.parkingSpaces" placeholder="{{condo.property.parkingSpaces}}" id="parkingSpaces" name="parkingSpaces" type="number" class="form-control input-md">
     </div>
-  </div>
 
-  <div class="form-row">
     <div class="form-group col-md-3">
       <label for="price">Price</label>
       <input [(ngModel)]="condo.property.price" placeholder="{{condo.property.price}}" id="price" name="price" type="number" class="form-control input-md">
@@ -66,36 +60,36 @@
 
 
   <legend>Extra Details</legend>
-  <div class="container my-3">
-    <div class="form-row">
+  <div class="form-row mt-2">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="condo.gymIncluded" name="gymIncluded" id="gymIncluded" value=true labelPosition="after">Gym Included</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="condo.storageIncluded" name="storageIncluded" id="storageIncluded" value=true labelPosition="after">Storatge Included</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="condo.elevatorIncluded" name="elevatorIncluded" id="elevatorIncluded" value=true labelPosition="after">Elevator Included</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="condo.outdoorAreasIncluded" name="outdoorAreasIncluded" id="outdoorAreasIncluded" value=true labelPosition="after">Outdoor Areas Included</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="condo.buildingInsurance" name="buildingInsurance" id="buildingInsurance" value=true labelPosition="after">Building Insurence</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="condo.airConditioning" name="airConditioning" id="airConditioning" value=true labelPosition="after">Air Conditioning</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="condo.property.petsAllowed" name="petsAllowed" id="petsAllowed" value=true labelPosition="after">Pets Allowed</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="condo.conciergeIncluded" name="conciergeIncluded" id="conciergeIncluded" value=true labelPosition="after">Concierge Included</mat-checkbox>
     </div>
 
@@ -104,8 +98,8 @@
 
 </div>
 
-<div class="spaceTop">
-  <button class="btn btn-primary btn-lg spaceRight" (click)="save()">Save Changes</button>
-  <button class="btn btn-lg btn-danger spaceRight" title="delete condo" (click)="delete(condo)" style="margin-left:5px;">Delete Property</button>
-  <button class="btn btn-secondary btn-lg" (click)="goBack()" style="margin-left:5px;">go back</button>
+<div class="spaceTop my-5">
+  <button class="btn btn-primary spaceRight" (click)="save()">Save Changes</button>
+  <button class="btn btn-danger spaceRight" title="delete house" (click)="delete(house)" style="margin-left:5px;">Delete Property</button>
+  <button class="btn btn-secondary" (click)="goBack()" style="margin-left:5px;">go back</button>
 </div>

@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  <div class="form-row">
+  <div class="form-row mb-3">
     <div class="form-group col-md-3">
       <label for="city">City</label>
       <input [(ngModel)]="apartment.property.address.city" placeholder="{{apartment.property.address.city}}" id="city" name="city" type="text" class="form-control input-md">
@@ -34,28 +34,22 @@
 
   <legend>Apartment Details</legend>
 
-  <div class="form-row">
+  <div class="form-row mb-3">
     <div class="form-group col-md-3">
       <label for="bedrooms">Bedrooms</label>
       <input [(ngModel)]="apartment.property.bedrooms" placeholder="{{apartment.property.bedrooms}}" id="bedrooms" name="bedrooms" type="number" class="form-control input-md">
     </div>
-  </div>
-  <div class="form-row">
 
     <div class="form-group col-md-3">
       <label for="bathrooms">Bathrooms</label>
       <input [(ngModel)]="apartment.property.bathrooms" placeholder="{{apartment.property.bathrooms}}" id="bathrooms" name="bathrooms" type="number" class="form-control input-md">
     </div>
-  </div>
 
-  <div class="form-row">
     <div class="form-group col-md-3">
       <label for="parkingSpaces">ParkingSpaces</label>
       <input [(ngModel)]="apartment.property.parkingSpaces" placeholder="{{apartment.property.parkingSpaces}}" id="parkingSpaces" name="parkingSpaces" type="number" class="form-control input-md">
     </div>
-  </div>
 
-  <div class="form-row">
     <div class="form-group col-md-3">
       <label for="price">Price</label>
       <input [(ngModel)]="apartment.property.price" placeholder="{{apartment.property.price}}" id="price" name="price" type="number" class="form-control input-md">
@@ -63,36 +57,36 @@
   </div>
 
   <legend>Extra Details</legend>
-  <div class="container my-3">
-    <div class="form-row">
+  <div class="form-row mt-2">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="apartment.internetIncluded" name="internetIncluded" id="internetIncluded" value=true labelPosition="after">Internet Included</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="apartment.heatingIncluded" name="heatingIncluded" id="heatingIncluded" value=true labelPosition="after">Heating Included</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="apartment.laundryIncluded" name="laundryIncluded" id="laundryIncluded" value=true labelPosition="after">Laundry Included</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="apartment.electricityIncluded" name="electricityIncluded" id="electricityIncluded" value=true labelPosition="after">Electricity Included</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="apartment.smokersAccepted" name="smokersAccepted" id="smokersAccepted" value=true labelPosition="after">Smokers Accepted</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="apartment.airConditioning" name="airConditioning" id="airConditioning" value=true labelPosition="after">Air Conditioning</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="apartment.property.petsAllowed" name="petsAllowed" id="petsAllowed" value=true labelPosition="after">Pets Allowed</mat-checkbox>
     </div>
 
-    <div class="form-row">
+    <div class="col-md-3">
       <mat-checkbox [(ngModel)]="apartment.furnished" name="furnished" id="furnished" value=true labelPosition="after">Furnished</mat-checkbox>
     </div>
 
@@ -101,8 +95,8 @@
 </div>
 
 
-<div class="spaceTop">
-  <button class="btn btn-primary btn-lg spaceRight" (click)="save()" >Save Changes</button>
-  <button class="btn btn-lg btn-danger spaceRight" title="delete apartment" (click)="delete(apartment)" style="margin-left:5px;"> Delete Property </button>
-  <button class="btn btn-secondary btn-lg" (click)="goBack()" style="margin-left:5px;">go back</button>
+<div class="spaceTop my-5">
+  <button class="btn btn-primary spaceRight" (click)="save()">Save Changes</button>
+  <button class="btn btn-danger spaceRight" title="delete house" (click)="delete(house)" style="margin-left:5px;">Delete Property</button>
+  <button class="btn btn-secondary" (click)="goBack()" style="margin-left:5px;">go back</button>
 </div>

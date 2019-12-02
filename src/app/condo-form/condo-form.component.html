@@ -16,7 +16,7 @@
 
     </div>
 
-    <div class="form-row">
+    <div class="form-row mb-3">
       <div class="form-group col-md-3">
         <label for="city">City</label>
         <input ngModel id="city" name="city" type="text" placeholder="Montreal" class="form-control input-md">
@@ -37,29 +37,22 @@
 
     <legend>Condo Details</legend>
 
-    <div class="form-row">
+    <div class="form-row mb-3">
       <div class="form-group col-md-3">
         <label for="bedrooms">Bedrooms</label>
         <input ngModel id="bedrooms" name="bedrooms" type="number" placeholder="3" class="form-control input-md">
       </div>
-    </div>
-    <div class="form-row">
 
       <div class="form-group col-md-3">
         <label for="bathrooms">Bathrooms</label>
         <input ngModel id="bathrooms" name="bathrooms" type="number" placeholder="2" class="form-control input-md">
       </div>
-    </div>
-
-    <div class="form-row">
 
       <div class="form-group col-md-3">
         <label for="parkingSpaces">ParkingSpaces</label>
         <input ngModel id="parkingSpaces" name="parkingSpaces" type="number" placeholder="2" class="form-control input-md">
       </div>
-    </div>
 
-    <div class="form-row">
       <div class="form-group col-md-3">
         <label for="price">Price</label>
         <input ngModel id="price" name="price" type="number" placeholder="235,000" class="form-control input-md">
@@ -67,36 +60,39 @@
     </div>
 
     <legend>Extra Details</legend>
-    <div class="container my-3">
-      <div class="form-row">
+    <div class="form-row  mt-2">
+      <div class="col-md-3">
         <mat-checkbox ngModel name="gymIncluded" id="gymIncluded" value=true labelPosition="after">Gym Included</mat-checkbox>
       </div>
 
-      <div class="form-row">
+      <div class="col-md-3">
         <mat-checkbox ngModel name="storageIncluded" id="storageIncluded" value=true labelPosition="after">Storatge Included</mat-checkbox>
       </div>
 
-      <div class="form-row">
+      <div class="col-md-3">
         <mat-checkbox ngModel name="elevatorIncluded" id="elevatorIncluded" value=true labelPosition="after">Elevator Included</mat-checkbox>
       </div>
 
-      <div class="form-row">
+      <div class="col-md-3">
         <mat-checkbox ngModel name="outdoorAreasIncluded" id="outdoorAreasIncluded" value=true labelPosition="after">Outdoor Areas Included</mat-checkbox>
       </div>
+    </div>
 
-      <div class="form-row">
+    <div class="form-row">
+
+      <div class="col-md-3">
         <mat-checkbox ngModel name="buildingInsurance" id="buildingInsurance" value=true labelPosition="after">Building Insurence</mat-checkbox>
       </div>
 
-      <div class="form-row">
+      <div class="col-md-3">
         <mat-checkbox ngModel name="airConditioning" id="airConditioning" value=true labelPosition="after">Air Conditioning</mat-checkbox>
       </div>
 
-      <div class="form-row">
+      <div class="col-md-3">
         <mat-checkbox ngModel name="petsAllowed" id="petsAllowed" value=true labelPosition="after">Pets Allowed</mat-checkbox>
       </div>
 
-      <div class="form-row">
+      <div class="col-md-3">
         <mat-checkbox ngModel name="conciergeIncluded" id="conciergeIncluded" value=true labelPosition="after">Concierge Included</mat-checkbox>
       </div>
 
@@ -104,9 +100,9 @@
 
   </fieldset>
 
-  <div class="spaceTop">
-    <button type="submit" class="btn btn-primary btn-lg spaceRight">Submit</button>
-    <button type="button" class="btn btn-secondary btn-lg spaceRight" (click)="goBack()" style="margin-left:5px;">Go back</button>
+  <div class="spaceTop my-5">
+    <button type="submit" class="btn btn-primary spaceRight">Submit</button>
+    <button type="button" class="btn btn-secondary spaceRight" (click)="goBack()" style="margin-left:5px;">Go back</button>
   </div>
 </form>
 
